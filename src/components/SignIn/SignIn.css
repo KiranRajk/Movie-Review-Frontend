@@ -1,0 +1,136 @@
+.sign-in{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--Off-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signin-container {
+    /* display:  flex;
+    justify-content: center;
+    align-items: center; */
+    border: 1px solid var(--Grayish-blue);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    /* padding: 2rem; */
+    width: 900px;
+    min-height: 450px;
+    border-radius: 10px;
+}
+.image-part {
+    position: relative;
+    background-image: url('../../assets/images/MovieReel.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image-part:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/* .image-part h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-wrap: balance;
+    text-align: center;
+    font-weight: 800;
+} */
+.image-part h2 {
+    z-index: 1;
+    letter-spacing: 3px;
+    text-wrap: balance;
+    color: var(--Off-white);
+    font-weight: 800;
+    font-size: x-large;
+}
+.image-part p {
+    z-index: 1;
+    text-wrap: balance;
+    color: var(--font-color);
+    font-weight: 400;
+    font-size:  medium;
+}
+.form-part {
+    padding: 2em;
+    border-radius: 0 10px  10px 0 ;
+}
+.form-part h1 {
+    font-size: 30px;
+    text-align: center;
+    /* color: #8C928C; */
+    color: #016E80;
+    font-weight: 700;
+}
+.form-part form {
+    color: var(--Dark-grayish-blue);
+    /* width: 350px; */
+    margin-block: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.sign-in-button{
+    border: 0;
+    width: 90%;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #5eaaa7;
+    /* color: var(--Very-dark-blue); */
+    color: var(--Off-white);
+    transition: background-color .5s ease, color .5s ease;
+}
+.sign-in-button:hover{
+    background:#016e80;
+    color: var(--Off-white);
+}
+.new-account-container{
+    height: 0;
+    margin-bottom: 15px;
+    width: 100%;
+    position: relative;
+    left: 20px;
+}
+.new-account{
+    text-wrap: balance;
+    font-size: .85rem;
+}
+/* .new-account span{
+    color:  #016E80;
+} */
+.new-account span:hover {
+    cursor: pointer;
+    color:  #016E80;
+    text-decoration: underline;
+}
+@media (max-width: 576px ) {
+   .image-part{
+    height: 35vh;
+    border-radius: 10px 10px 0 0;
+   }
+   .signin-container{
+    width: 90%;
+   }
+}
+/* @media (min-width: 576px) {
+    .form-part form {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+} */
