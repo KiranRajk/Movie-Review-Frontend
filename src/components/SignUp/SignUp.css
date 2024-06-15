@@ -1,0 +1,128 @@
+.sign-up{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--Off-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-container {
+    border: 1px solid var(--Grayish-blue);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    width: 900px;
+    min-height: 450px;
+    border-radius: 10px;
+}
+.signup-image {
+    position: relative;
+    background-image: url('../../assets/images/MovieReel.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signup-image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.signup-image h2 {
+    z-index: 1;
+    letter-spacing: 3px;
+    text-wrap: wrap;
+    color: var(--Off-white);
+    font-weight: 800;
+    font-size: x-large;
+}
+.signup-image p{
+    z-index: 1;
+    /* letter-spacing: 5px; */
+    text-wrap: balance;
+    color: var(--font-color);
+    font-weight: 400;
+    font-size:  medium;
+}
+
+.form-part-signup {
+    padding: 2em;
+    border-radius: 0 10px  10px 0 ;
+}
+.form-part-signup h1 {
+    font-size: 30px;
+    text-align: left;
+    /* color: #8C928C; */
+    color: #016E80;
+    font-weight: 700;
+}
+.form-part-signup form {
+    color: var(--Dark-grayish-blue);
+    /* width: 350px; */
+    margin-block: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.sign-up-button{
+    border: 0;
+    width: 90%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #5eaaa7;
+    /* color: var(--Very-dark-blue); */
+    color: var(--Off-white);
+    transition: background-color .5s ease, color .5s ease;
+}
+.sign-up-button:hover{
+    background:#016e80;
+    color: var(--Off-white);
+}
+.old-account-container{
+    height: 0;
+    margin-bottom: 15px;
+    width: 100%;
+    position: relative;
+    left: 20px;
+}
+.old-account{
+    text-wrap: balance;
+    font-size: .85rem;
+}
+
+/* .new-account span{
+    color:  #016E80;
+} */
+.old-account span:hover {
+    cursor: pointer;
+    color:  #016E80;
+    text-decoration: underline;
+}
+.error-message {
+    width: 100%;
+    position: relative;
+    left: 20px;
+}
+.error-message p {
+    font-size: 0.8rem;
+    color: #FF0000;
+}
+@media (max-width: 576px ) {
+    .signup-image{
+    height: 35vh;
+    border-radius: 10px 10px 0 0;
+   }
+   .signup-container{
+    width: 90%;
+   }
+}

@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 
-const SignIn = () => {
+const SignIn = ({toggleBox}) => {
     const navigate = useNavigate();
     const [logCre, setlogCre] = useState({email : '', password:''});
 
@@ -47,8 +47,8 @@ const SignIn = () => {
             <div className="signin-container row ">
 
                 <div className='image-part col-md-6 col-sm-6 '>
-                    <h2 >Welcome Fellow Cinephile</h2>
-                    <p >loremnn</p>
+                    <h2 >Welcome to CineCritique</h2>
+                    <p >Where Every Frame is Judged</p>
                 </div>
 
                 <div className='form-part col-md-6 col-sm-6 my-2'>
@@ -56,7 +56,7 @@ const SignIn = () => {
                     <form onSubmit={handleSubmit}>
                         <CustomInput label={'Email'} type={'email'} name={'email'} value={logCre.email} onchange={handleChange}/>
                         <CustomInput label={'Password'} type={'password'} name={'password'} value={logCre.password} onchange={handleChange}/>
-
+                        <div className='new-account-container'><p className='new-account'>Don't have an account? <span><i onClick={()=>toggleBox('signup')}>Signup Here</i></span></p></div>
                         <button className='sign-in-button'>SignIn</button>
                     </form>
                 </div>
