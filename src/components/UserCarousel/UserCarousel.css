@@ -1,0 +1,59 @@
+.carousel-container {
+    position: relative;
+    height: 620px;
+    width: 100%;
+    overflow: hidden;
+}
+.carousel-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(135, 38, 87, 0.7); /* Dark raspberry overlay with 70% opacity */
+    z-index: 1;
+  }
+.carousel-image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url('../../assets/images/MovieReel.jpg') no-repeat center center;
+    background-size: cover;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-0%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: rgba(135, 38, 87, 0.9); */
+    /* background: rgba(0, 0, 0, 0.5); */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 2;
+}
+.carousel-caption h1 {
+    margin: 0 0 10px 0;
+    font-size: 3em; 
+    font-weight: 700;
+    width: 100%;
+    letter-spacing: 0.1em;
+  }
+  
+  .carousel-caption h2 {
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: 100;
+    width: 100%;
+    letter-spacing: 0.1em;
+  }

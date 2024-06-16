@@ -21,7 +21,7 @@ const UserNavbar = () => {
             </ul>
         </nav>
         <div className="user-info">
-            <div class="user-name" style={{color:'#c2ce98'}}>John Doe &#x25BE;</div>
+            <div className="user-name" style={{color:'#c2ce98'}}>John Doe &#x25BE;</div>
         </div>
         <div id='mobile' onClick={handleClick}>
             <i id='bar' className={Clicked ? 'fas fa-times'  : 'fas fa-bars'}></i>

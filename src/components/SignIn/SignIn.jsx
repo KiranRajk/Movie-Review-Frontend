@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './SignIn.css'
-import CustomInput from '../../common/CustomInput/CustomInput'
+import CustomInput from '../common/CustomInput/CustomInput'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 

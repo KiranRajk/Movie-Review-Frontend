@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './SignUp.css'
-import CustomInput from '../../common/CustomInput/CustomInput'
+import CustomInput from '../common/CustomInput/CustomInput'
 import axios from 'axios'
 
 const SignUp = ({toggleBox}) => {
