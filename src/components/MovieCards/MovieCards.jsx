@@ -18,12 +18,12 @@ const MovieCards = ({movie}) => {
         return text
     }
   const navigate = useNavigate()
-//   const openCourtDetails = () =>{
-//     navigate(`/courtDetails/${court._id}`)
-//   }
+  const openMovieDetails = () => {
+    navigate(`/movieDetails/${movie._id}`)
+  }
   return (
     
-    <MDBCard style={{width:'18rem'}} className='col-12 col-md-3  col-lg-4 col-xl-2 col-xxl-1 ' >
+    <MDBCard style={{width:'18rem'}} className='  ' onClick={openMovieDetails}>
       <MDBCardImage style={{height:'20rem'}}  src={movie.image} position='top' alt='...' />
       <MDBCardBody>
         <MDBCardTitle>{movie.title}</MDBCardTitle>

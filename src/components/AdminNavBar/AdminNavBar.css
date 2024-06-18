@@ -1,0 +1,123 @@
+  /* Navbar Container */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 0.5rem 1rem;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Title Style */
+  #title {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .admin-text {
+    position: absolute;
+    top: -0.5rem;
+    right: -1.5rem;
+    font-size: 0.75rem;
+    color: #ffcc00;
+  }
+  
+  /* Navigation Links */
+  .links ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .links .link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .links .link:hover {
+    color: #ffcc00;
+  }
+  
+  /* Logout Section */
+  .logout-link {
+    text-decoration: none;
+    color: white;
+    background-color: #ffcc00;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-link:hover {
+    background-color: #9f8511;
+  }
+  
+  /* Toggle Button */
+  .toggle-button {
+    display: none;
+    background-color: #ffcc00;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .links ul {
+      flex-direction: column;
+      align-items: center;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      display: none;
+      padding: 1rem 0;
+    }
+  
+    .links ul.show {
+      display: flex;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+  
+    .navbar {
+      flex-wrap: wrap;
+    }
+  
+    .toggle-button {
+      display: block;
+    }
+  
+    #title {
+      margin-bottom: 0.5rem;
+    }
+  }
+  

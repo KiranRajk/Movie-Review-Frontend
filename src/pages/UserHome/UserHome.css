@@ -1,0 +1,23 @@
+.movie-cards {
+    /* margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; */
+    background-color: #86667D;
+    /* align-items: center; */
+}
+.main {
+    padding: 20px 0; /* Add padding to the main section */
+  }
+  
+  .movie-cards .col-lg-4,
+  .movie-cards .col-md-6,
+  .movie-cards .col-sm-12 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .movie-cards .row {
+    margin: 0 auto; /* Center the row within the container */
+  }
+  

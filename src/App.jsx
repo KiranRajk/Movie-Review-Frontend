@@ -1,12 +1,15 @@
 import React from 'react'
 import Routing from './components/Routing'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { UserProvider } from './helpers/UserContext';
 
 const App = () => {
   return (
-    <div>
-      <Routing/>
-    </div>
+    
+    <UserProvider>
+        <Routing/>
+    </UserProvider>
+   
   )
 }
 

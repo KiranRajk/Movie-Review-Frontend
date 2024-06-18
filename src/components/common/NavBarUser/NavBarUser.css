@@ -4,17 +4,8 @@
     align-items: center;
     background-color: var(--Desire-red);
     padding: 25px 50px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-    animation:1s ease  SlideIn;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-@keyframes SlideIn {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
 .nav-bar #title {
     color: var(--font-color);
     font-weight: 600;
@@ -31,61 +22,31 @@
     margin: 0;
     gap: 0.5rem;
 }
-#nav-links a {
-    color: var(--Off-white);
-}
 .links ul li {
     list-style: none;
     padding: 0 20px;
 }
-.links ul li a {
+.links ul li a, .links ul li #movie-section, .links ul li #logout, .links ul li #about {
     text-decoration: none;
     position: relative;
-    color: green;
+    font-weight: 600;
     transition: color 0.3s ease;
+    color: var(--font-color)
 }
-.links ul li a:hover {
-    color: var(--Desire-red);
-}
-
-.links ul li a:after{
-    content: "";
-    width: 0%;
-    height: 2px;
-    background-color: var(--azureish-white);
-    position: absolute;
-    bottom: -4px;
-    left: 0px;
-    transition: width  0.3s ease;
-} 
-.links ul li a:hover:after{
-    width: 50%;
+.links ul li a:hover , .links ul li #movie-section:hover, .links ul li #logout:hover, .links ul li #about:hover {
+    color: var(--Dark-raspberry);
 }
 
-  
-/* .links ul li a::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -1px;
-    left: 0;
-    background-color: var(--font-color); 
-    transition: width 0.3s ease;
-  }
-  
-  .links ul li a:hover::before {
-    width: 100%;   
-  } */
+/* For mobile devices*/
 
-  /* For  mobile devices */
-  #mobile {
+#mobile {
     display: none;
-  }
-  #mobile i {
-    color: var(--azureish-white);
+}
+#mobile i {
+    color: var(--Off-white);
     align-items: center;
   }
+
   @media screen and (max-width: 992px){
     #nav-links {
         display: flex;
@@ -93,12 +54,12 @@
         justify-content: flex-start;
         align-items: flex-start;
         position: fixed;
-        top: 70px;
+        top: 74px;
         right: -300px;
         width: 300px;   
         height: 100vh;
         background-color: var(--Desire-red);
-        opacity: 0.90;
+        opacity: 0.97;
         box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1) ;
         padding: 40px 0 0 10px;
         z-index: 3;
@@ -117,3 +78,4 @@
         cursor: pointer;
       }
   }
+

@@ -22,6 +22,9 @@
     --American-purple: #522546;
     --Dark-purple: #311D3F;
 }
+html {
+  scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;

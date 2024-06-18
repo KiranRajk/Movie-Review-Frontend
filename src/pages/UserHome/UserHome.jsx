@@ -1,16 +1,30 @@
 import React, { useEffect, useState } from 'react'
-import UserNavbar from '../../components/common/UserNavBar/UserNavbar'
 import UserCarousel from '../../components/UserCarousel/UserCarousel'
-import axios from 'axios'
+import './UserHome.css'
 import MovieCards from '../../components/MovieCards/MovieCards'
 import axiosInstance from '../../../config/AxiosInstance'
+import NavBarUser from '../../components/common/NavBarUser/NavBarUser'
+
 
 const UserHome = () => {
   const[movieData, setMovieData] = useState([])
+  const [scrollTo, setScrollTo] = useState(null);
 
   useEffect(()=>{
     getMovieData()
   }, [])
+
+  useEffect(() => {
+    if (scrollTo === 'movie-section') {
+      setTimeout(() => {
+        const movieSection = document.getElementById('movie-section');
+        if (movieSection) {
+          movieSection.scrollIntoView({ behavior: 'smooth' });
+          setScrollTo(null); 
+        }
+      }, 100); 
+    }
+  }, [scrollTo, movieData]);
 
   const getMovieData = async ()=> {
     try {
@@ -35,13 +49,18 @@ const UserHome = () => {
 
   return (
     <>
-    <UserNavbar/>
+   
+  <NavBarUser setScrollTo={setScrollTo}/>
     <UserCarousel/>
-    <div className='main container-fluid'>
-      <div className="row gap-2 p-2">
-      {movieData.map((movie)=><MovieCards movie={movie}/>)}
+
+    <div className='  main movie-cards '>
+      <div className=" container row justify-content-center pt-5" id='movie-section'>
+        {movieData.map((movie)=>(
+          <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+             <MovieCards movie={movie}/>
+          </div>   
+          ))}
       </div>
-        <h1>Welcome to your home page!</h1>
     </div>
     </>
   )
