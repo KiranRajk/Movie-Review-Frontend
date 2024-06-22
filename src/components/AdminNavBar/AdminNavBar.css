@@ -1,4 +1,4 @@
-  /* Navbar Container */
+  
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -13,7 +13,7 @@
     z-index: 1000;
   }
   
-  /* Title Style */
+ 
   #title {
     font-size: 1.5rem;
     color: #ffcc00;
@@ -30,8 +30,8 @@
     color: #ffcc00;
   }
   
-  /* Navigation Links */
-  .links ul {
+ 
+  .links #nav_links{
     list-style: none;
     display: flex;
     gap: 1rem;
@@ -55,7 +55,7 @@
     color: #ffcc00;
   }
   
-  /* Logout Section */
+  
   .logout-link {
     text-decoration: none;
     color: white;
@@ -69,31 +69,36 @@
     background-color: #9f8511;
   }
   
-  /* Toggle Button */
+ 
   .toggle-button {
+    position: relative;
+    left: 200px;
     display: none;
+    border-radius: 5px;
     background-color: #ffcc00;
     border: none;
     padding: 0.5rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   
-  /* Responsive Design */
+
   @media (max-width: 768px) {
-    .links ul {
+    .links #nav_links {  
       flex-direction: column;
       align-items: center;
-      background-color: #333;
+      /* background-color: #333; */
+      background: rgba(51, 51, 51, 0.6); /* Semi-transparent background */
+      backdrop-filter: blur(10px);
       position: absolute;
-      top: 60px;
+      top: 95px;
       left: 0;
       right: 0;
       display: none;
       padding: 1rem 0;
     }
   
-    .links ul.show {
+    .links #nav_links.show {
       display: flex;
     }
   

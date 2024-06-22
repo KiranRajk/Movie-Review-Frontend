@@ -10,6 +10,7 @@ const AddMovieAdmin = () => {
     director:'',
     year:'',
     description:'',
+    language:'',
   })
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
@@ -33,10 +34,10 @@ const AddMovieAdmin = () => {
     movieDataToSend.append('director', formData.director);
     movieDataToSend.append('year', formData.year);
     movieDataToSend.append('description', formData.description);
+    movieDataToSend.append('language', formData.language);
     if(image) {
       movieDataToSend.append('image', image)
-      console.log(setImage);
-      console.log('hitted image append', image);
+      console.log(movieDataToSend);
     }
     try {
       console.log('Hit1');
@@ -47,6 +48,7 @@ const AddMovieAdmin = () => {
       })
       console.log(response.data);
       alert('Movie added successfully!');
+      window.location.reload();
     } catch (error) {
       console.log('Hit2');
       console.error('Error adding movie:', error);
@@ -64,6 +66,7 @@ const AddMovieAdmin = () => {
                     <CustomInput label={'Genre'} type={'text'} name={'genre'} value={formData.genre} onchange={handleChange} />
                     <CustomInput label={'Director'} type={'text'} name={'director'} value={formData.director} onchange={handleChange} />
                     <CustomInput label={'Release Year'} type={'number'} name={'year'} value={formData.year} onchange={handleChange} />
+                    <CustomInput label={'Language'} type={'text'} name={'language'} value={formData.language} onchange={handleChange}  />
                     <CustomInput label={'Description'} type={'textarea'} name={'description'} value={formData.description} onchange={handleChange}/>
                     
                     <div className="custom-input">

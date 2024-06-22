@@ -23,7 +23,7 @@ const AdminNavbar = () => {
           &#9776;
         </button>
         <nav className="links">
-          <ul className={menuOpen ? "show" : ""}>
+          <ul id='nav_links' className={menuOpen ? "show" : ""}>
             <li>
               <Link to="/admin" className="link">
                 Home

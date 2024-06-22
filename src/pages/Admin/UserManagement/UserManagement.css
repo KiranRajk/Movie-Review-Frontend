@@ -7,7 +7,8 @@
 }
 
 .user-management-container h1 {
-    color: var(--font-color);
+   color: #131213;
+   font-weight: 500;
     margin-bottom: 20px;
     font-size: 2.5rem;
 }
@@ -29,8 +30,8 @@
 }
 
 .user-table th {
-    background-color: #2575fc;
-    color: #fff;
+    background-color: #333333;
+    color: #FFCC00;
 }
 
 .user-table tr:nth-child(even) {

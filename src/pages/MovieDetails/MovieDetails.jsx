@@ -73,6 +73,9 @@ const MovieDetails = () => {
                 <strong>Year:</strong> {movie.year}
               </p>
               <p>
+                <strong>Language:</strong> {movie.language}
+              </p>
+              <p>
                 <strong>Rating: </strong> {movie.rating} <span> / 5</span>
               </p>
             </div>

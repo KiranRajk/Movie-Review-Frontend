@@ -108,15 +108,19 @@
     color:  #016E80;
     text-decoration: underline;
 }
-.error-message {
-    width: 100%;
-    position: relative;
-    left: 20px;
+.error-message  {
+    display: inline;
+    color: red;
+    font-size: 0.875rem; /* Adjust size as necessary */
+    margin: -20px 0 -3px 0px; 
+    text-align: left; /* Ensure error message is aligned at the beginning */
 }
-.error-message p {
+
+
+/* .error-message p {
     font-size: 0.8rem;
     color: #FF0000;
-}
+} */
 @media (max-width: 576px ) {
     .signup-image{
     height: 35vh;

@@ -31,7 +31,7 @@ const UserManagement = () => {
 
     return (
         <div className='user-management-container'>
-            <h1>User Management</h1>
+            <h1>User Management System</h1>
             <table className='user-table'>
                 <thead>
                     <tr>

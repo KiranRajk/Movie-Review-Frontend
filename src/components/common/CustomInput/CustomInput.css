@@ -5,7 +5,8 @@
     border-radius: 10px;
 }
 
-.common-input-box input {
+.common-input-box input,
+.common-input-box textarea {
     outline: none;
     color: var(--Dark-grayish-blue);
     background-color: transparent;
@@ -16,7 +17,8 @@
     width: 100%;
     /* box-shadow: 1px 2px 4px rgba(222, 217, 217, 0.35); */
 }
-.common-input-box input:focus{
+.common-input-box input:focus,
+.common-input-box textarea:focus{
     border: 1.5px solid var(--Rich-black) ;
 }
 
@@ -32,7 +34,9 @@
     transition: 0.3s ease-in-out;
 }
 .common-input-box input:focus ~ label,
-.common-input-box input:valid ~ label {
+.common-input-box input:valid ~ label,
+.common-input-box textarea:focus ~ label,
+.common-input-box textarea:valid ~ label  {
     transform: translate(0,-1.20rem) scale(.8);
     color: var(--Off-white);
     padding: 0 10px;
