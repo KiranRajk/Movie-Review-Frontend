@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import './NavBarUser.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserContext } from '../../../helpers/UserContext';
+import DarkMode from '../../DarkModeButton/DarkMode';
 
 const NavBarUser = () => {
     const [Clicked, setClicked] = useState(false);
@@ -37,6 +38,7 @@ const NavBarUser = () => {
             </ul>
         </nav>
         <div className="user-info">
+            <DarkMode/>
             <div className="user-name" style={{color:'#c2ce98'}}>
                 {user ? user.name : 'Guest'}
             </div>
@@ -44,6 +46,7 @@ const NavBarUser = () => {
         <div id="mobile" onClick={handleClick}>
             <i id="bar" className={Clicked ? 'fas fa-times' : 'fas fa-bars'} ></i>
         </div>
+        
     </header>
     </>
   )

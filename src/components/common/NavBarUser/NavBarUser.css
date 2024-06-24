@@ -5,12 +5,15 @@
     background-color: var(--Desire-red);
     padding: 25px 50px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: relative;
 }
 .nav-bar #title {
     color: var(--font-color);
     font-weight: 600;
 }
 .links {
+    flex-grow: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -47,7 +50,20 @@
     align-items: center;
   }
 
+  .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    margin-left: 1rem; 
+    margin-right: 1rem;
+}
+
   @media screen and (max-width: 992px){
+    .links {
+        justify-content: flex-start; /* Align nav links to start on mobile */
+    }
     #nav-links {
         display: flex;
         flex-direction: column;
