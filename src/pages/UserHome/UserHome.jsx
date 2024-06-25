@@ -5,6 +5,7 @@ import MovieCards from '../../components/MovieCards/MovieCards'
 import axiosInstance from '../../../config/AxiosInstance'
 import NavBarUser from '../../components/common/NavBarUser/NavBarUser'
 import CustomNavBar from '../../components/common/CustomNavBar/CustomNavBar'
+import Footer from '../../components/common/Footer/Footer'
 
 
 const UserHome = () => {
@@ -63,6 +64,8 @@ const UserHome = () => {
           ))}
       </div>
     </div>
+
+    <Footer/>
     </>
   )
 }

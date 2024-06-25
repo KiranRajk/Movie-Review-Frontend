@@ -30,6 +30,7 @@
     padding: 0 20px;
 }
 .links ul li a, .links ul li #movie-section, .links ul li #logout, .links ul li #about {
+    cursor: pointer;
     text-decoration: none;
     position: relative;
     font-weight: 600;

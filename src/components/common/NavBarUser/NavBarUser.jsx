@@ -3,6 +3,7 @@ import './NavBarUser.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserContext } from '../../../helpers/UserContext';
 import DarkMode from '../../DarkModeButton/DarkMode';
+import toast from 'react-hot-toast';
 
 const NavBarUser = () => {
     const [Clicked, setClicked] = useState(false);
@@ -20,6 +21,7 @@ const NavBarUser = () => {
     const logOut = () =>{
         localStorage.removeItem('token');
         localStorage.removeItem('isAdmin');
+        toast.success('Logout successful. See you next time!')
         navigate('/');
       }
 
@@ -38,7 +40,7 @@ const NavBarUser = () => {
             </ul>
         </nav>
         <div className="user-info">
-            <DarkMode/>
+            {/* <DarkMode/> */}
             <div className="user-name" style={{color:'#c2ce98'}}>
                 {user ? user.name : 'Guest'}
             </div>

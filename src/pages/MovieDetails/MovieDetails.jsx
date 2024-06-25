@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import axiosInstance from "../../../config/AxiosInstance";
 import { Modal, Button } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
+import toast from "react-hot-toast";
+import Footer from "../../components/common/Footer/Footer";
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -45,13 +47,14 @@ const MovieDetails = () => {
             rating,
             comment,
         });
-        alert('Review added successfully!');
+
       setShowModal(false);
       setRating(0);
       setComment('');
+      toast.success('Review added successfully')
       getMovieDataById();
     } catch (error) {
-        alert('Error adding review');
+        toast.error('Error while adding your review')
     }
   };
 
@@ -105,9 +108,11 @@ const MovieDetails = () => {
           )}
         </div>
       </div>
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+      <Footer/>
+
+      <Modal show={showModal} onHide={() => setShowModal(false)} className="custom-modal">
         <Modal.Header closeButton>
-          <Modal.Title>Add Review</Modal.Title>
+          <Modal.Title className="modal-title">Add Review</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <h5>Rate the movie according to your liking</h5>
@@ -128,8 +133,8 @@ const MovieDetails = () => {
               );
             })}
           </div>
-          <h5>Write Review</h5>
-          <textarea
+          <h5 className="mt-4 mb-1">Write your review</h5>
+          <textarea rows={5}
             className="form-control"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
@@ -139,7 +144,7 @@ const MovieDetails = () => {
           <Button variant="secondary" onClick={() => setShowModal(false)}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={handleSubmitReview}>
+          <Button variant="success"  onClick={handleSubmitReview}>
             Submit
           </Button>
         </Modal.Footer>

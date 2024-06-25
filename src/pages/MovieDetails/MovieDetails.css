@@ -148,6 +148,32 @@
   }
   
   .star.on {
-    color: yellow; /* Color for selected stars */
+    color: rgb(255,215,0); /* Color for selected stars */
   }
+  
+
+  /* CustomModal.css */
+.custom-modal .modal-content {
+    background-image: linear-gradient(to right top, #eac9e1, #e6c6da, #e0c3d3, #dbc0cc, #d5bdc6);
+  }
+  
+  .custom-modal .modal-header {
+    background-image: linear-gradient(to right top, #eac9e1, #e6c6da, #e0c3d3, #dbc0cc, #d5bdc6);
+    /*Change to your desired background color*/
+    color: white; 
+    /* Change to your desired text color */
+  }
+  
+  .custom-modal .modal-footer {
+    background-image: linear-gradient(to right top, #eac9e1, #e6c6da, #e0c3d3, #dbc0cc, #d5bdc6); /* Change to your desired background color */
+    color: white; /* Change to your desired text color */
+  }
+  
+  .custom-modal .modal-title {
+    color: rgb(81, 74, 74);
+    font-weight: 700;
+  }
+  
+
+
   
